@@ -1,7 +1,7 @@
 # AXWDecipherSolver
 
 This is a small rust program to solve monoalphabetic substitution ciphers.
-It was made to solve the daily challenge of [Decipher](https://decipher.wtf)
+It was made to solve the daily challenge of [Decipher](https://decipher.wtf).
 
 ## Building
 
@@ -16,63 +16,70 @@ cargo build [--release]
 You can run it as binary or via `cargo`:
 
 ```
-cargo run "Aopz pz h alza mvy aol zbizapabapvu jpwoly kljvkly. Pa zovbsk mpuk tvza vm aol dvykz pu aopz zlualujlz. Thfil fvb jhu ptwyvcl pa?"
+cargo run "Aol xbpjr iyvdu mve qbtwz vcly aol shgf kvn. Aopz pz h alza zlualujl mvy aol zbizapabapvu jpwoly kljvkly. Pa zovbsk mpuk tvza dvykz vm aopz tlzzhnl."
+```
 
-# results in:
+Result:
+```
 AXWDecipherSolver
 
-Ciphertext: AOPZ PZ H ALZA MVY AOL ZBIZAPABAPVU JPWOLY KLJVKLY. PA ZOVBSK MPUK TVZA VM AOL DVYKZ PU AOPZ ZLUALUJLZ. THFIL FVB JHU PTWYVCL PA?
-Key: 
-A[T,] 
-B[U,] 
-C[V,] 
-D[F,W,] 
-E[F,G,J,K,Q,W,X,Z,] 
-F[Y,] 
-G[F,J,K,Q,W,X,Z,] 
-H[A,] 
-I[B,] 
-J[C,] 
-K[D,] 
-L[E,] 
-M[F,K,] 
-N[F,G,J,K,Q,W,X,Z,] 
-O[H,] 
-P[I,] 
-Q[F,G,J,K,W,X,Z,] 
-R[F,G,J,K,Q,W,X,Z,] 
-S[L,] 
-T[M,] 
-U[N,] 
-V[O,] 
-W[P,] 
-X[F,G,J,K,Q,W,Z,] 
-Y[R,] 
-Z[S,] 
+Constructed key: 
+A => [T,] 
+B => [U,] 
+C => [V,] 
+D => [W,] 
+E => [X,] 
+F => [Y,] 
+G => [Z,] 
+H => [A,] 
+I => [B,] 
+J => [C,] 
+K => [D,] 
+L => [E,] 
+M => [F,] 
+N => [G,] 
+O => [H,] 
+P => [I,] 
+Q => [J,] 
+R => [K,] 
+S => [L,] 
+T => [M,] 
+U => [N,] 
+V => [O,] 
+W => [P,] 
+X => [Q,] 
+Y => [R,] 
+Z => [S,] 
 
-Translation: THIS IS A TEST *OR THE SUBSTITUTION CIPHER DECODER. IT SHOULD *IND MOST O* THE *ORDS IN THIS SENTENCES. MAYBE YOU CAN IMPROVE IT?
+Words found in ciphertext:
+                 AOL | ["THE"]
+               XBPJR | ["QUICK"]
+               IYVDU | ["BROWN"]
+                 MVE | ["FOX"]
+               QBTWZ | ["JUMPS"]
+                VCLY | ["OVER"]
+                 AOL | ["THE"]
+                SHGF | ["LAZY"]
+                 KVN | ["DOG"]
                 AOPZ | ["THIS"]
                   PZ | ["IS"]
                    H | ["A"]
                 ALZA | ["TEST"]
-                 MVY | ["FOR", "KOR"]
+            ZLUALUJL | ["SENTENCE"]
+                 MVY | ["FOR"]
                  AOL | ["THE"]
         ZBIZAPABAPVU | ["SUBSTITUTION"]
               JPWOLY | ["CIPHER"]
              KLJVKLY | ["DECODER"]
                   PA | ["IT"]
               ZOVBSK | ["SHOULD"]
-                MPUK | ["FIND", "KIND"]
+                MPUK | ["FIND"]
                 TVZA | ["MOST"]
-                  VM | ["OF", "OK"]
-                 AOL | ["THE"]
-               DVYKZ | ["WORDS", "FORDS"]
-                  PU | ["IN"]
+               DVYKZ | ["WORDS"]
+                  VM | ["OF"]
                 AOPZ | ["THIS"]
-           ZLUALUJLZ | ["SENTENCES"]
-               THFIL | ["MAYBE"]
-                 FVB | ["YOU"]
-                 JHU | ["CAN"]
-             PTWYVCL | ["IMPROVE"]
-                  PA | ["IT"]
+             TLZZHNL | ["MESSAGE"]
+
+Ciphertext:  AOL XBPJR IYVDU MVE QBTWZ VCLY AOL SHGF KVN. AOPZ PZ H ALZA ZLUALUJL MVY AOL ZBIZAPABAPVU JPWOLY KLJVKLY. PA ZOVBSK MPUK TVZA DVYKZ VM AOPZ TLZZHNL.
+Translation: THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG. THIS IS A TEST SENTENCE FOR THE SUBSTITUTION CIPHER DECODER. IT SHOULD FIND MOST WORDS OF THIS MESSAGE.
 ```

@@ -43,7 +43,7 @@ impl Display for PotentialKey {
     /// display purposes.
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         for (idx, chars) in self.0.iter().enumerate() {
-            write!(f, "{}[", (idx as u8 + 65) as char)?;
+            write!(f, "{} => [", (idx as u8 + 65) as char)?;
             let mut sorted_chars: Vec<char> = chars.clone().into_iter().collect();
             sorted_chars.sort();
             for kchar in sorted_chars {

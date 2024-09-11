@@ -22,11 +22,13 @@ fn main() {
     // Output
     println!("AXWDecipherSolver");
     println!("");
-    println!("Ciphertext: {}", &puzzle);
-    println!("Key: \n{}", key);
-    println!("Translation: {}", translation.unwrap());
+    println!("Constructed key: \n{}", key);
+    println!("Words found in ciphertext:");
     for word in parsing::list_words(&puzzle) {
         let possible_words = dict.get_possible_words(word.as_str(), &key);
         println!("{:>20} | {:?}", word, possible_words);
     }
+    println!();
+    println!("Ciphertext:  {}", &puzzle);
+    println!("Translation: {}", translation.unwrap());
 }
