@@ -1,11 +1,6 @@
 /// Divides the puzzle text into its words. We remove and split at every non-alphabetic
 /// character, so "THEY'RE GOOD." gets split into "THEY", "RE" and "GOOD".
 pub fn list_words(puzzle: &str) -> Vec<String> {
-    /*     let possible_words = puzzle
-    .split_whitespace()
-    .map(|s| s.trim_matches(|c: char| c.is_ascii_punctuation()))
-    .filter(|s| s.chars().all(|c: char| c.is_ascii_alphabetic())); */
-
     let possible_words = puzzle
         .split(|c: char| !c.is_ascii_alphabetic())
         .filter(|s| s.len() > 0);
